@@ -11,6 +11,8 @@ export default new Vuex.Store({
   state: {
     countries: ['France', 'Japan', 'South Korea', 'Germany', 'Belgium', 'USA', 'Australia', 'New Zealand', 'UAE', 'Czech Republic', 'Sweden', 'Denmark'],
   },
-  mutations: {},
+  mutations: {
+
+  },
   actions: {}
 })
