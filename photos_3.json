@@ -1,6 +1,6 @@
 {
     "photos": [{
-            "path": "images_temp/japan/kyoto",
+            "path": "images_temp_3/japan/kyoto",
             "fileName": "kyoto_station.jpg",
             "title": "",
             "year": "2013",
@@ -11,7 +11,7 @@
             "ratio": "z"
         },
         {
-            "path": "images_temp/japan/kyoto",
+            "path": "images_temp_3/japan/kyoto",
             "fileName": "tako_street_art_kyoto.jpg",
             "title": "",
             "year": "2013",
@@ -66,7 +66,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp/korea/seoul",
+            "path": "images_temp_3/korea/seoul",
             "fileName": "hyehwa.jpg",
             "title": "",
             "year": "2014",
@@ -77,7 +77,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp/korea/seoul",
+            "path": "images_temp_3/korea/seoul",
             "fileName": "mister_chat_seoul.jpg",
             "title": "",
             "year": "2014",

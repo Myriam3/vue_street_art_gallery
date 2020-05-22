@@ -3,7 +3,9 @@ import imageAPI from "@/services/imageApi.js";
 export const namespaced = true;
 
 export const state = {
-    imageList: []
+    imageList: [],
+    imageServer: 'http://localhost/street_art_react/'
+    //'https://myriambucourt.com/photos/street_art/'
 };
 
 export const mutations = {
