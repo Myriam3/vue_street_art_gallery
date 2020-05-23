@@ -1,10 +1,7 @@
 <template>
   <div>
     <CountryList />
-    <main class="main">
-      <ImageList :images="images" />
-    </main>
-    {{ lightbox.image }}
+    <ImageList :images="images" />
     <Lightbox v-if="lightbox.toggled" :image="lightbox.image" />
     <div class="overlay" v-if="lightbox.toggled"></div>
   </div>
@@ -40,6 +37,11 @@ export default {
     },
   },
   beforeRouteUpdate(to, from, next) {
+    // TODO: no request, only filter
+    // check previous route
+    // if all -> country :: filter
+    // if country -> all :: is first all request ? display all : request all
+    // if country -> country :: is fist all request ?  filter : request by country
     if (to.params.country === "All") {
       store.dispatch("images/fetchAll").then(() => {
         next();

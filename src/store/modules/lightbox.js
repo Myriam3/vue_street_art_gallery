@@ -1,8 +1,8 @@
 export const namespaced = true;
 
 export const state = {
-    toggled: true,
-    info: true,
+    toggled: false,
+    info: false,
     image: {
         "path": "images_temp_3/japan/kyoto",
         "fileName": "kyoto_station.jpg",

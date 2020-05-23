@@ -4,38 +4,78 @@ export const namespaced = true;
 
 export const state = {
     imageList: [],
-    imageServer: 'http://localhost/street_art_react/'
-    //'https://myriambucourt.com/photos/street_art/'
+    currentBatch: 0,
+    imageServer: //'http://localhost/street_art_react/'
+        'https://myriambucourt.com/photos/street_art/'
+};
+
+export const getters = {
+    left: state => {
+        return state.imageList.length - state.currentBatch
+    }
 };
 
 export const mutations = {
     SET_IMAGES(state, images) {
         state.imageList = images;
     },
+    RESET_BATCH(state) {
+        state.currentBatch = 0;
+    },
+    ADD_BATCH(state, number) {
+        state.currentBatch = state.currentBatch + number
+    }
 };
 
 export const actions = {
     fetchAll({
-        commit
+        dispatch
     }) {
         return imageAPI
             .getImages()
             .then((response) => {
-                commit('SET_IMAGES', response.data)
+                dispatch('setImages', response.data);
             })
             .catch((error) => {
                 console.log(error);
             });
     },
     fetchByCountry({
-        commit
-    }, country) {
+            dispatch
+        },
+        country) {
         return imageAPI.getImagesByCountry(country)
             .then(response => {
-                commit('SET_IMAGES', response.data);
+                dispatch('setImages', response.data);
             })
             .catch((error) => {
                 console.log(error);
             });
+    },
+    setImages({
+        commit,
+        dispatch
+    }, images) {
+        commit('RESET_BATCH');
+        commit('SET_IMAGES', images);
+        dispatch('displayImages');
+    },
+    displayImages({
+        state,
+        commit,
+        getters
+    }) {
+        let batchNb = 20;
+
+        if (!getters.left > 0) return;
+
+        if (state.imageList.length <= batchNb) { // Only one batch
+            batchNb = state.imageList.length;
+        } else {
+            if (getters.left < batchNb) { // Last batch
+                batchNb = getters.left;
+            }
+        }
+        commit('ADD_BATCH', batchNb);
     }
 };
