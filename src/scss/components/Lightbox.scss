@@ -1,13 +1,10 @@
 .lightbox {
+    position: absolute;
+    z-index: 999;
     top: 0;
     left: 0;
     bottom: 0;
     width: 100%;
-}
-
-.lightbox {
-    position: absolute;
-    z-index: 999;
     height: 100vh;
     text-align: center;
     display: flex;
@@ -16,18 +13,18 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-}
 
-.lightbox-wrap {
-    display: inline-block;
-    position: relative;
-}
+    .lightbox-wrap {
+        display: inline-block;
+        position: relative;
+    }
 
-.lightbox img {
-    display: block;
-    max-height: 600px;
-    max-height: 90vh;
-    width: auto;
+    img {
+        display: block;
+        max-height: 600px;
+        max-height: 90vh;
+        width: auto;
+    }
 }
 
 @supports(max-height: 90vh) {
@@ -43,58 +40,59 @@
     padding: 0;
     display: block;
 
-}
+    svg {
+        width: 1.7rem;
+        height: 1.7rem;
+        ;
+        opacity: 0.4;
+        fill: currentColor;
+        padding: 0.5rem;
+    }
 
-.lightbox-btn:focus {
-    outline: 0;
-    background: rgba(255, 255, 255, 0.05);
-}
+    &:focus {
+        outline: 0;
+        background: rgba(255, 255, 255, 0.05);
+    }
 
-.lightbox-btn:focus svg,
-.lightbox-btn:hover svg {
-    fill: var(--main-color);
-    opacity: 1;
-}
+    &:focus,
+    &:hover {
+        svg {
+            fill: map_get($colors, main-color);
+            opacity: 1;
+        }
+    }
 
-.lightbox-btn svg {
-    width: 1.7rem;
-    height: 1.7rem;
-    ;
-    opacity: 0.4;
-    fill: currentColor;
-    padding: 0.5rem;
-}
+    &.close-btn {
+        top: 0;
+        right: 0;
+    }
 
-.lightbox-btn.close-btn {
-    top: 0;
-    right: 0;
-}
-
-.lightbox-btn.nav-btn {
-    top: 2rem;
-}
-
-.lightbox-btn.nav-btn svg {}
-
-.lightbox .next,
-.lightbox .info-btn {
-    right: 0;
-}
-
-.lightbox .prev {
-    left: 0;
+    &.nav-btn {
+        top: 2rem;
+    }
 }
 
 
-.lightbox .info-btn {
-    bottom: 0;
+.lightbox {
 
-}
+    .next,
+    .info-btn {
+        right: 0;
+    }
 
-.lightbox .info-btn svg {
-    widows: 1.3em;
-    height: 1.3rem;
-    padding: 0;
+    .prev {
+        left: 0;
+    }
+
+    .info-btn {
+        bottom: 0;
+
+        svg {
+            widows: 1.3em;
+            height: 1.3rem;
+            padding: 0;
+        }
+    }
 }
 
 @media (min-width:520px) {

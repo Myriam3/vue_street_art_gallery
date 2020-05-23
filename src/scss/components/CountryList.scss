@@ -1,20 +1,22 @@
-.nav {
-    margin: 1rem 0 2rem;
-    text-align: center;
-}
+.country-list {
+    .nav {
+        margin: 1rem 0 2rem;
+        text-align: center;
 
-.nav-item {
-    display: inline-block;
-    margin: 0.5rem;
-}
+        .nav-item {
+            display: inline-block;
+            margin: 0.5rem;
 
-.country-list .nav-item.active a,
-.country-list .router-link-active {
-    border-bottom: 3px solid map_get($colors, main-color);
-    color: map_get($colors, secondary-text);
-}
+            &:hover,
+            &:focus {
+                color: map_get($colors, secondary-text);
+            }
+        }
+    }
 
-.country-list .nav-item a:hover,
-.country-list .nav-item a:focus {
-    color: map_get($colors, secondary-text);
+    .nav-item.active a,
+    .router-link-active {
+        border-bottom: 3px solid map_get($colors, main-color);
+        color: map_get($colors, secondary-text);
+    }
 }
