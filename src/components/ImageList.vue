@@ -8,7 +8,7 @@
         :class="image.classes"
         v-show="index <= currentBatch - 1"
       >
-        <a href="#" v-on:click.prevent>
+        <a href="#" @click="openLightbox(index, $event)">
           <img
             v-if="index <= currentBatch - 1"
             :src="imageServer + image.path + '/' + image.fileName"
@@ -56,6 +56,10 @@ export default {
   methods: {
     loadMoreImages() {
       store.dispatch("images/displayImages");
+    },
+    openLightbox(index, e) {
+      e.preventDefault();
+      store.dispatch("lightbox/displayImage", index);
     },
   },
 };

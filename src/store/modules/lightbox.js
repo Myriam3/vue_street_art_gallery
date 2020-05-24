@@ -2,26 +2,16 @@ export const namespaced = true;
 
 export const state = {
     toggled: false,
-    info: false,
-    image: {
-        "path": "images_temp_3/japan/kyoto",
-        "fileName": "kyoto_station.jpg",
-        "title": "",
-        "year": "2013",
-        "country": "Japan",
-        "city": "Kyoto",
-        "location": "Kawaramachi Station",
-        "classes": ["portrait"],
-        "ratio": "z"
-    }
+    info: true,
+    currentIndex: 0
 };
 
 export const mutations = {
     TOGGLE_LIGHTBOX(state) {
         state.toggled = !state.toggled;
     },
-    SET_LIGHTBOX_IMAGE(state, image) {
-        state.image = image
+    SET_IMAGE(state, index) {
+        state.currentIndex = index
     },
     TOGGLE_INFO(state) {
         state.info = !state.info;
@@ -29,15 +19,16 @@ export const mutations = {
 };
 
 export const actions = {
-    toogleLightbox({
+    toggleLightbox({
         commit
     }) {
         commit('TOGGLE_LIGHTBOX');
     },
     displayImage({
         commit
-    }, image) {
-        commit('SET_LIGHTBOX_IMAGE', image);
+    }, index) {
+        if (!state.toggled) state.toggled = true;
+        commit('SET_IMAGE', index);
     },
     toggleInfo({
         commit

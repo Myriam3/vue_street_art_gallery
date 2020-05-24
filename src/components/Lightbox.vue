@@ -1,6 +1,33 @@
 <template>
-  <div class="lightbox">
-    <button class="btn lightbox-btn close-btn" title="Close" aria-label="Close">
+  <div class="lightbox" @click.self="closeLightbox">
+    <div class="lightbox-wrap">
+      <img
+        alt=""
+        :src="imageServer + image.path + '/' + image.fileName"
+        @click="toggleInfo"
+      />
+      <ImageDetails :image="image" />
+      <button
+        class="btn lightbox-btn info-btn"
+        title="Details"
+        arial-label="Details"
+        @click="toggleInfo"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+          <path
+            d="M22 34h4V22h-4v12zm2-30C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16zm-2-22h4v-4h-4v4z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+    <!--Navigation-->
+    <button
+      class="btn lightbox-btn close-btn"
+      title="Close"
+      aria-label="Close"
+      @click="closeLightbox"
+      @
+    >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
         <path
           d="M38 12.83L35.17 10 24 21.17 12.83 10 10 12.83 21.17 24 10 35.17 12.83 38 24 26.83 35.17 38 38 35.17 26.83 24z"
@@ -11,6 +38,8 @@
       class="btn lightbox-btn nav-btn prev"
       title="Previous"
       aria-label="Previous photo"
+      @click="navigate(-1)"
+      v-if="this.currentIndex !== 0"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
         <path
@@ -22,6 +51,8 @@
       class="btn lightbox-btn nav-btn next"
       title="Next"
       aria-label="Next photo"
+      @click="navigate(1)"
+      v-if="this.currentIndex !== this.lastIndex"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
         <path
@@ -29,46 +60,102 @@
         ></path>
       </svg>
     </button>
-    <div class="lightbox-wrap">
-      <img alt="" :src="imageServer + image.path + '/' + image.fileName" />
-      <ImageDetails :image="image" />
-      <button
-        class="btn lightbox-btn info-btn"
-        title="Details"
-        arial-label="Details"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-          <path
-            d="M22 34h4V22h-4v12zm2-30C12.95 4 4 12.95 4 24s8.95 20 20 20 20-8.95 20-20S35.05 4 24 4zm0 36c-8.82 0-16-7.18-16-16S15.18 8 24 8s16 7.18 16 16-7.18 16-16 16zm-2-22h4v-4h-4v4z"
-          ></path>
-        </svg>
-      </button>
-    </div>
   </div>
 </template>
 
 <script>
+import store from "@/store/";
 import ImageDetails from "@/components/ImageDetails";
 
-//TODO: navigation (+ accessibility):
-//  - previous/next image (arrows, arrow keys)
-// - close (button, click on overlay, escape key)
-// - toggle info (button, click on image, space bar)
+//TODO: TAB TRAPPING
 
 export default {
   components: {
     ImageDetails,
   },
-  props: {
-    image: {
-      type: Object,
-      required: true,
+  computed: {
+    images() {
+      return store.state.images;
+    },
+    image() {
+      return this.images.imageList[this.currentIndex];
+    },
+    imageServer() {
+      return this.images.imageServer;
+    },
+    currentIndex() {
+      return store.state.lightbox.currentIndex;
+    },
+    lastIndex() {
+      return this.images.imageList.length - 1;
+    },
+    isInfo() {
+      return store.state.lightbox.info;
     },
   },
-  computed: {
-    imageServer() {
-      return this.$store.state.images.imageServer;
+  methods: {
+    closeLightbox() {
+      store.dispatch("lightbox/toggleLightbox");
     },
+    toggleInfo() {
+      store.dispatch("lightbox/toggleInfo");
+    },
+    navigate(direction) {
+      let lastBatchIndex = this.images.currentBatch - 1;
+      let newIndex = this.currentIndex + direction;
+
+      if (direction === -1 && this.currentIndex === 0) {
+        // First image
+        newIndex = null;
+      } else if (direction === 1 && this.currentIndex === lastBatchIndex) {
+        // Last of batch
+        if (this.currentIndex !== this.lastIndex) {
+          // Load new batch
+          store.dispatch("images/displayImages");
+        } else {
+          // Last image
+          newIndex = null;
+        }
+      }
+
+      if (newIndex !== null) {
+        store.dispatch("lightbox/displayImage", newIndex);
+      }
+    },
+    keyboardsEvents(e) {
+      switch (e.key) {
+        case "ArrowLeft":
+          e.preventDefault();
+          this.navigate(-1);
+          break;
+        case "ArrowRight":
+          e.preventDefault();
+          this.navigate(1);
+          break;
+        case "ArrowUp":
+          e.preventDefault();
+          if (!this.isInfo) this.toggleInfo();
+          break;
+        case "ArrowDown":
+          e.preventDefault();
+          if (this.isInfo) this.toggleInfo();
+          break;
+        case "Escape":
+          e.preventDefault();
+          this.closeLightbox();
+          break;
+        case " ":
+          e.preventDefault();
+          this.toggleInfo();
+          break;
+      }
+    },
+  },
+  created() {
+    window.addEventListener("keydown", this.keyboardsEvents);
+  },
+  destroyed() {
+    window.removeEventListener("keydown", this.keyboardsEvents);
   },
 };
 </script>

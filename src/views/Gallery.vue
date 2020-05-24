@@ -2,8 +2,8 @@
   <div>
     <CountryList />
     <ImageList :images="images" />
-    <Lightbox v-if="lightbox.toggled" :image="lightbox.image" />
-    <div class="overlay" v-if="lightbox.toggled"></div>
+    <Lightbox v-if="isLightbox" />
+    <div class="overlay" v-if="isLightbox"></div>
   </div>
 </template>
 
@@ -32,8 +32,8 @@ export default {
     images() {
       return store.state.images.imageList;
     },
-    lightbox() {
-      return store.state.lightbox;
+    isLightbox() {
+      return store.state.lightbox.toggled;
     },
   },
   beforeRouteUpdate(to, from, next) {
