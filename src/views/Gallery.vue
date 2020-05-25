@@ -37,8 +37,8 @@ export default {
     },
   },
   methods: {
-    openLightbox(index) {
-      store.dispatch("lightbox/displayImage", index);
+    openLightbox(index, lastFocusEl) {
+      store.dispatch("lightbox/displayImage", { index, lastFocusEl });
     },
   },
   beforeRouteUpdate(to, from, next) {

@@ -124,7 +124,7 @@ export default {
       }
 
       if (newIndex !== null) {
-        store.dispatch("lightbox/displayImage", newIndex);
+        store.dispatch("lightbox/displayImage", { index: newIndex });
       }
     },
     keyboardsEvents(e) {
@@ -174,7 +174,6 @@ export default {
     this.$refs.firstTabEl.focus();
   },
   beforeUpdate() {
-    console.log("before update");
     // Focus trapping
     // Avoid losing focus when prev/next buttons disapear
     if (
@@ -189,10 +188,9 @@ export default {
       this.$refs.lastTabEl.focus();
     }
   },
-  updated() {
-    console.log("updated");
-  },
   destroyed() {
+    const lastFocus = store.state.lightbox.lastFocusEl;
+    if (lastFocus) lastFocus.focus();
     window.removeEventListener("keydown", this.keyboardsEvents);
   },
 };

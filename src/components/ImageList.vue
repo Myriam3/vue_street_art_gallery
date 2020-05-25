@@ -1,14 +1,18 @@
 <template>
   <main class="main">
-    <ul class="image-list">
+    <ul class="image-list" ref="imageList">
       <li
         v-for="(image, index) in images"
         :key="index"
         class="image-list-item"
-        :class="image.classes"
+        :class="[image.classes]"
         v-show="index <= currentBatch - 1"
       >
-        <a href="#" @click="openLightbox(index, $event)">
+        <a
+          href="#"
+          @click="openLightbox(index, $event)"
+          :class="{ lastItem: index === currentBatch - 1 }"
+        >
           <img
             v-if="index <= currentBatch - 1"
             :src="imageServer + image.path + '/' + image.fileName"
@@ -31,8 +35,6 @@
 </template>
 
 <script>
-// TODO: Gérer le focus quand on ouvre/ferme lightbox
-// TODO: Gérer focus quand on charge new batch
 // TODO: SVG World map navigation component
 // TODO: request next batch in the background
 // TODO: responsive images (mobile)
@@ -56,11 +58,13 @@ export default {
   },
   methods: {
     loadMoreImages() {
+      const lastItem = this.$refs.imageList.querySelector(".lastItem");
       store.dispatch("images/displayImages");
+      lastItem.focus();
     },
     openLightbox(index, e) {
       e.preventDefault();
-      this.$emit("open-lightbox", index);
+      this.$emit("open-lightbox", index, e.currentTarget);
     },
   },
 };

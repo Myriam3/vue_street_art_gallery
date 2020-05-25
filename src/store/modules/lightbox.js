@@ -3,7 +3,8 @@ export const namespaced = true;
 export const state = {
     toggled: false,
     info: true,
-    currentIndex: 0
+    currentIndex: 0,
+    lastFocusEl: null
 };
 
 export const mutations = {
@@ -15,6 +16,9 @@ export const mutations = {
     },
     TOGGLE_INFO(state) {
         state.info = !state.info;
+    },
+    SET_LAST_FOCUS(state, el) {
+        state.lastFocusEl = el;
     }
 };
 
@@ -26,12 +30,16 @@ export const actions = {
     },
     displayImage({
         commit
-    }, index) {
+    }, {
+        index,
+        lastFocusEl
+    }) {
         if (!state.toggled) {
             state.toggled = true;
 
         }
         commit('SET_IMAGE', index);
+        if (lastFocusEl) commit('SET_LAST_FOCUS', lastFocusEl);
     },
     toggleInfo({
         commit
