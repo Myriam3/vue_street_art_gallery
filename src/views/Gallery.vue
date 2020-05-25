@@ -1,7 +1,7 @@
 <template>
   <div>
     <CountryList />
-    <ImageList :images="images" />
+    <ImageList :images="images" @open-lightbox="openLightbox" />
     <Lightbox v-if="isLightbox" />
     <div class="overlay" v-if="isLightbox"></div>
   </div>
@@ -34,6 +34,11 @@ export default {
     },
     isLightbox() {
       return store.state.lightbox.toggled;
+    },
+  },
+  methods: {
+    openLightbox(index) {
+      store.dispatch("lightbox/displayImage", index);
     },
   },
   beforeRouteUpdate(to, from, next) {

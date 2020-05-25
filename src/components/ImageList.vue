@@ -31,10 +31,11 @@
 </template>
 
 <script>
-// TODO: Image list accessibility/current-index (?)
+// TODO: Gérer le focus quand on ouvre/ferme lightbox
+// TODO: Gérer focus quand on charge new batch
 // TODO: SVG World map navigation component
-// TODO: Loader images (first load country + lazy load)
 // TODO: request next batch in the background
+// TODO: responsive images (mobile)
 
 import store from "@/store";
 
@@ -59,7 +60,7 @@ export default {
     },
     openLightbox(index, e) {
       e.preventDefault();
-      store.dispatch("lightbox/displayImage", index);
+      this.$emit("open-lightbox", index);
     },
   },
 };

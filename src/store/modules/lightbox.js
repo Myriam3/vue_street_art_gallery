@@ -27,7 +27,10 @@ export const actions = {
     displayImage({
         commit
     }, index) {
-        if (!state.toggled) state.toggled = true;
+        if (!state.toggled) {
+            state.toggled = true;
+
+        }
         commit('SET_IMAGE', index);
     },
     toggleInfo({

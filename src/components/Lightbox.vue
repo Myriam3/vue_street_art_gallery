@@ -12,6 +12,8 @@
         title="Details"
         arial-label="Details"
         @click="toggleInfo"
+        ref="lastTabEl"
+        tabindex="4"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
           <path
@@ -26,7 +28,8 @@
       title="Close"
       aria-label="Close"
       @click="closeLightbox"
-      @
+      ref="firstTabEl"
+      tabindex="1"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
         <path
@@ -40,6 +43,8 @@
       aria-label="Previous photo"
       @click="navigate(-1)"
       v-if="this.currentIndex !== 0"
+      ref="prevBtn"
+      tabindex="2"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
         <path
@@ -53,6 +58,8 @@
       aria-label="Next photo"
       @click="navigate(1)"
       v-if="this.currentIndex !== this.lastIndex"
+      ref="nextBtn"
+      tabindex="3"
     >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
         <path
@@ -66,8 +73,6 @@
 <script>
 import store from "@/store/";
 import ImageDetails from "@/components/ImageDetails";
-
-//TODO: TAB TRAPPING
 
 export default {
   components: {
@@ -144,15 +149,48 @@ export default {
           e.preventDefault();
           this.closeLightbox();
           break;
-        case " ":
-          e.preventDefault();
-          this.toggleInfo();
-          break;
+        // Focus trapping
+        case "Tab":
+          if (e.shiftKey) {
+            // Tabbing backward
+            if (e.target === this.$refs.firstTabEl) {
+              e.preventDefault();
+              this.$refs.lastTabEl.focus();
+            }
+          } else {
+            // Tabbing forward
+            if (e.target === this.$refs.lastTabEl) {
+              e.preventDefault();
+              this.$refs.firstTabEl.focus();
+            }
+          }
       }
     },
   },
-  created() {
+  created() {},
+  mounted() {
     window.addEventListener("keydown", this.keyboardsEvents);
+    // Focus trapping
+    this.$refs.firstTabEl.focus();
+  },
+  beforeUpdate() {
+    console.log("before update");
+    // Focus trapping
+    // Avoid losing focus when prev/next buttons disapear
+    if (
+      this.currentIndex === 0 &&
+      document.activeElement === this.$refs.prevBtn
+    ) {
+      this.$refs.lastTabEl.focus();
+    } else if (
+      this.currentIndex === this.lastIndex &&
+      document.activeElement === this.$refs.nextBtn
+    ) {
+      this.$refs.lastTabEl.focus();
+    }
+  },
+  updated() {
+    console.log("updated");
   },
   destroyed() {
     window.removeEventListener("keydown", this.keyboardsEvents);
