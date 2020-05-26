@@ -35,9 +35,9 @@
 </template>
 
 <script>
-// TODO: SVG World map navigation component
 // TODO: request next batch in the background
 // TODO: responsive images (mobile)
+// TODO: Filter by city
 
 import store from "@/store";
 

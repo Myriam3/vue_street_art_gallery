@@ -1,6 +1,7 @@
 <template>
   <div>
     <CountryList />
+    <Worldmap v-if="this.$route.params.country === 'All'" />
     <ImageList :images="images" @open-lightbox="openLightbox" />
     <Lightbox v-if="isLightbox" />
     <div class="overlay" v-if="isLightbox"></div>
@@ -12,15 +13,16 @@ import store from "@/store";
 import CountryList from "@/components/CountryList";
 import ImageList from "@/components/ImageList";
 import Lightbox from "@/components/Lightbox";
+import Worldmap from "@/components/Worldmap";
 
-// TODO: open image in lighbox
-// TODO: Lazy loading image
+// TODO: SVG World map navigation component
 
 export default {
   components: {
     CountryList,
     ImageList,
     Lightbox,
+    Worldmap,
   },
   props: {
     country: {
