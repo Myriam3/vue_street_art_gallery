@@ -1,0 +1,14 @@
+.city-list {
+    margin: 1rem 0;
+    text-align: center;
+
+    .nav-item {
+        color: map_get($colors, secondary-text);
+        display: inline-block;
+        margin: 0.5rem;
+
+        &.active a {
+            border-bottom: 2px solid map_get($colors, secondary-text);
+        }
+    }
+}

@@ -22,7 +22,10 @@
       </li>
     </ul>
     <div class="pagination">
-      <p>{{ currentBatch }} / {{ images.length }}</p>
+      <p :title="this.paginationInfo" aria-hidden="true">
+        {{ currentImageNb }} / {{ images.length }}
+      </p>
+      <p class="visually-hidden">{{ this.paginationInfo }}</p>
       <button
         v-if="currentBatch < images.length"
         class="btn load-btn"
@@ -54,6 +57,22 @@ export default {
     },
     currentBatch() {
       return store.state.images.currentBatch;
+    },
+    currentImageNb() {
+      if (this.images.length <= this.currentBatch) {
+        return this.images.length;
+      } else {
+        return this.currentBatch;
+      }
+    },
+    paginationInfo() {
+      if (this.currentImageNb !== this.images.length) {
+        return (
+          this.currentImageNb + " images displayed out of " + this.images.length
+        );
+      } else {
+        return "All images are displayed";
+      }
     },
   },
   methods: {

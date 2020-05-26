@@ -1,9 +1,15 @@
 <template>
   <div>
     <CountryList />
-    <Worldmap v-if="this.$route.params.country === 'All'" />
+    <CityList
+      v-if="!isAllCountries"
+      :cityList="cityList"
+      :currentCity="this.cityFilter"
+      @city-filter="filterByCity"
+    />
+    <Worldmap v-if="isAllCountries" />
     <ImageList :images="images" @open-lightbox="openLightbox" />
-    <Lightbox v-if="isLightbox" />
+    <Lightbox v-if="isLightbox" :images="images" />
     <div class="overlay" v-if="isLightbox"></div>
   </div>
 </template>
@@ -11,18 +17,18 @@
 <script>
 import store from "@/store";
 import CountryList from "@/components/CountryList";
+import CityList from "@/components/CityList";
+import Worldmap from "@/components/Worldmap";
 import ImageList from "@/components/ImageList";
 import Lightbox from "@/components/Lightbox";
-import Worldmap from "@/components/Worldmap";
-
-// TODO: SVG World map navigation component
 
 export default {
   components: {
     CountryList,
+    CityList,
+    Worldmap,
     ImageList,
     Lightbox,
-    Worldmap,
   },
   props: {
     country: {
@@ -30,17 +36,53 @@ export default {
       default: "All",
     },
   },
+  data() {
+    return {
+      cityFilter: false,
+    };
+  },
   computed: {
     images() {
+      if (this.cityFilter) {
+        return this.imagesByCity;
+      } else {
+        return this.storeImages;
+      }
+    },
+    storeImages() {
       return store.state.images.imageList;
+    },
+    imagesByCity() {
+      return this.storeImages.filter((img) => img.city === this.cityFilter);
     },
     isLightbox() {
       return store.state.lightbox.toggled;
+    },
+    isAllCountries() {
+      return this.$route.params.country === "All";
+    },
+    cityList() {
+      if (this.isAllCountries) return [];
+      else {
+        let cities = this.storeImages.reduce((acc, next) => {
+          acc.push(next.city);
+          return acc;
+        }, []);
+        // Remove duplicates
+        cities = Array.from(new Set(cities));
+
+        return cities;
+      }
     },
   },
   methods: {
     openLightbox(index, lastFocusEl) {
       store.dispatch("lightbox/displayImage", { index, lastFocusEl });
+    },
+    filterByCity(filter) {
+      if (filter === this.cityFilter) return;
+      this.cityFilter = filter;
+      console.log("images by city", this.imagesByCity);
     },
   },
   beforeRouteUpdate(to, from, next) {
@@ -58,6 +100,8 @@ export default {
         next();
       });
     }
+    //Reset city filter
+    this.cityFilter = false;
   },
 };
 </script>

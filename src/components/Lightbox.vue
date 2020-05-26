@@ -78,21 +78,24 @@ export default {
   components: {
     ImageDetails,
   },
-  computed: {
-    images() {
-      return store.state.images;
+  props: {
+    images: {
+      type: Array,
+      required: true,
     },
+  },
+  computed: {
     image() {
-      return this.images.imageList[this.currentIndex];
+      return this.images[this.currentIndex];
     },
     imageServer() {
-      return this.images.imageServer;
+      return store.state.images.imageServer;
     },
     currentIndex() {
       return store.state.lightbox.currentIndex;
     },
     lastIndex() {
-      return this.images.imageList.length - 1;
+      return this.images.length - 1;
     },
     isInfo() {
       return store.state.lightbox.info;
@@ -106,19 +109,22 @@ export default {
       store.dispatch("lightbox/toggleInfo");
     },
     navigate(direction) {
-      let lastBatchIndex = this.images.currentBatch - 1;
+      let lastBatchIndex = store.state.images.currentBatch - 1;
       let newIndex = this.currentIndex + direction;
 
+      // Navigate backwards
       if (direction === -1 && this.currentIndex === 0) {
         // First image
         newIndex = null;
-      } else if (direction === 1 && this.currentIndex === lastBatchIndex) {
-        // Last of batch
-        if (this.currentIndex !== this.lastIndex) {
-          // Load new batch
+      }
+      // Navigate forwards
+      else if (direction === 1) {
+        // Last of batch: load new batch
+        if (this.currentIndex === lastBatchIndex) {
           store.dispatch("images/displayImages");
-        } else {
-          // Last image
+        }
+        // Last image
+        if (this.currentIndex === this.lastIndex) {
           newIndex = null;
         }
       }
