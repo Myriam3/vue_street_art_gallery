@@ -7,9 +7,20 @@
       :currentCity="this.cityFilter"
       @city-filter="filterByCity"
     />
-    <Worldmap v-if="isAllCountries" />
-    <ImageList :images="images" @open-lightbox="openLightbox" />
-    <Lightbox v-if="isLightbox" :images="images" />
+    <transition name="slide" appear>
+      <Worldmap v-if="isAllCountries" />
+    </transition>
+    <transition name="test" appear>
+      <ImageList
+        v-if="images.length"
+        :images="images"
+        @open-lightbox="openLightbox"
+      />
+    </transition>
+
+    <transition name="fade-in">
+      <Lightbox v-if="isLightbox" :images="images" />
+    </transition>
     <div class="overlay" v-if="isLightbox"></div>
   </div>
 </template>
@@ -117,5 +128,22 @@ export default {
 .overlay {
   position: fixed;
   background: rgba(0, 0, 0, 0.9);
+}
+
+/***Transitions***/
+
+.fade-in-enter {
+  opacity: 0;
+}
+.fade-in-enter-active {
+  transition: opacity 0.25s ease-out;
+}
+
+.slide-enter {
+  transform: translateY(10px);
+  opacity: 0;
+}
+.slide-enter-active {
+  transition: all 0.5s ease;
 }
 </style>

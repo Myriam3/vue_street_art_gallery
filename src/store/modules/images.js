@@ -5,8 +5,8 @@ export const namespaced = true;
 export const state = {
     imageList: [],
     currentBatch: 0,
-    imageServer: 'http://localhost/street_art_react/'
-    //'https://myriambucourt.com/photos/street_art/'
+    imageServer: //'http://localhost/street_art_react/'
+        'https://myriambucourt.com/photos/street_art/'
 };
 
 export const getters = {

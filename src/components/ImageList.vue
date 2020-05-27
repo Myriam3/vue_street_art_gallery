@@ -1,6 +1,6 @@
 <template>
-  <main class="main">
-    <ul class="image-list" ref="imageList">
+  <main class="main" ref="imageList">
+    <transition-group tag="ul" name="image" appear class="image-list">
       <li
         v-for="(image, index) in images"
         :key="index"
@@ -20,7 +20,7 @@
           />
         </a>
       </li>
-    </ul>
+    </transition-group>
     <div class="pagination">
       <p :title="this.paginationInfo" aria-hidden="true">
         {{ currentImageNb }} / {{ images.length }}
@@ -40,7 +40,6 @@
 <script>
 // TODO: request next batch in the background
 // TODO: responsive images (mobile)
-// TODO: Filter by city
 
 import store from "@/store";
 
@@ -92,26 +91,14 @@ export default {
 <style lang="scss">
 @import "@/scss/components/ImageList.scss";
 
-.pagination {
-  padding: 1rem;
-  margin-top: 1rem;
-  text-align: center;
+.image-enter,
+.image-leave {
+  opacity: 0;
 }
-
-.pagination {
-  p {
-    margin: 0;
-    color: map_get($colors, main-color);
-    padding: 0.3rem;
-  }
-  .load-btn {
-    background: map_get($colors, main-color);
-    color: #fff;
-    padding: 0.5rem;
-    &:hover,
-    &:focus {
-      background: map_get($colors, main-color-dark);
-    }
-  }
+.image-enter-active {
+  transition: all 1s ease-out;
+}
+.image-leave-active {
+  transition: all 1s ease-out;
 }
 </style>

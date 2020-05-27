@@ -8,6 +8,29 @@
     }
 }
 
+.pagination {
+    padding: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+
+    p {
+        margin: 0;
+        color: map_get($colors, main-color);
+        padding: 0.3rem;
+    }
+
+    .load-btn {
+        background: map_get($colors, main-color);
+        color: #fff;
+        padding: 0.5rem;
+
+        &:hover,
+        &:focus {
+            background: map_get($colors, main-color-dark);
+        }
+    }
+}
+
 /*** Layout ***/
 
 /* 1. FALLBACK */

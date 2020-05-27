@@ -27,8 +27,6 @@
 </template>
 
 <script>
-//TODO: not clickable if country's image < 1
-
 export default {
   props: {},
   methods: {},
