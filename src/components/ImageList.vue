@@ -1,6 +1,6 @@
 <template>
   <main class="main" ref="imageList">
-    <transition-group tag="ul" name="image" appear class="image-list">
+    <ul class="image-list">
       <li
         v-for="(image, index) in images"
         :key="index"
@@ -11,16 +11,16 @@
         <a
           href="#"
           @click="openLightbox(index, $event)"
+          class="relative"
           :class="{ lastItem: index === currentBatch - 1 }"
         >
-          <img
+          <ImageItem
             v-if="index <= currentBatch - 1"
-            :src="imageServer + image.path + '/' + image.fileName"
-            alt=""
+            :path="image.path + '/' + image.fileName"
           />
         </a>
       </li>
-    </transition-group>
+    </ul>
     <div class="pagination">
       <p :title="this.paginationInfo" aria-hidden="true">
         {{ currentImageNb }} / {{ images.length }}
@@ -42,8 +42,12 @@
 // TODO: responsive images (mobile)
 
 import store from "@/store";
+import ImageItem from "@/components/ImageItem";
 
 export default {
+  components: {
+    ImageItem,
+  },
   props: {
     images: {
       type: Array,
@@ -51,9 +55,6 @@ export default {
     },
   },
   computed: {
-    imageServer() {
-      return store.state.images.imageServer;
-    },
     currentBatch() {
       return store.state.images.currentBatch;
     },
@@ -91,14 +92,19 @@ export default {
 <style lang="scss">
 @import "@/scss/components/ImageList.scss";
 
-.image-enter,
-.image-leave {
-  opacity: 0;
+.image-list-item .loading {
+  display: block;
+  height: 100%;
+  background: map_get($colors, light-grey);
+  animation: imageListItemLoader 1.5s alternate;
 }
-.image-enter-active {
-  transition: all 1s ease-out;
-}
-.image-leave-active {
-  transition: all 1s ease-out;
+
+@keyframes imageListItemLoader {
+  0% {
+    background: #ffffff;
+  }
+  100% {
+    background: map_get($colors, light-grey);
+  }
 }
 </style>

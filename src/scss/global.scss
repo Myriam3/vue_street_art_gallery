@@ -29,6 +29,12 @@ img {
     cursor: pointer;
 }
 
+/*Utilities*/
+
+.relative {
+    position: relative;
+}
+
 /* For screen readers */
 .visually-hidden {
     position: absolute !important;

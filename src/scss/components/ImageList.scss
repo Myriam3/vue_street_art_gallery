@@ -1,6 +1,7 @@
 .image-list-item {
     a {
         display: block;
+        height: 100%;
 
         &:focus img {
             opacity: 0.5;

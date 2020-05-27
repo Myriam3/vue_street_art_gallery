@@ -1,10 +1,10 @@
 <template>
   <div class="lightbox" @click.self="closeLightbox">
     <div class="lightbox-wrap">
-      <img
-        alt=""
-        :src="imageServer + image.path + '/' + image.fileName"
-        @click="toggleInfo"
+      <ImageItem
+        :path="image.path + '/' + image.fileName"
+        :lightbox="true"
+        @toggle-info="toggleInfo"
       />
       <ImageDetails :image="image" />
       <button
@@ -72,10 +72,15 @@
 
 <script>
 import store from "@/store/";
+import ImageItem from "@/components/ImageItem";
 import ImageDetails from "@/components/ImageDetails";
+
+//TODO: bug affichage lightbox (change orientation paysage)
+//TODO bug affichage : imageDetails bloque click sur overlay
 
 export default {
   components: {
+    ImageItem,
     ImageDetails,
   },
   props: {
@@ -87,9 +92,6 @@ export default {
   computed: {
     image() {
       return this.images[this.currentIndex];
-    },
-    imageServer() {
-      return store.state.images.imageServer;
     },
     currentIndex() {
       return store.state.lightbox.currentIndex;
@@ -173,7 +175,6 @@ export default {
       }
     },
   },
-  created() {},
   mounted() {
     window.addEventListener("keydown", this.keyboardsEvents);
     // Focus trapping
@@ -204,4 +205,26 @@ export default {
 
 <style lang="scss">
 @import "@/scss/components/Lightbox.scss";
+
+.lightbox .loading::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: map_get($colors, main-color);
+  animation: load 1.5s infinite alternate;
+}
+
+@keyframes load {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 </style>

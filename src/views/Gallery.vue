@@ -10,17 +10,12 @@
     <transition name="slide" appear>
       <Worldmap v-if="isAllCountries" />
     </transition>
-    <transition name="test" appear>
-      <ImageList
-        v-if="images.length"
-        :images="images"
-        @open-lightbox="openLightbox"
-      />
-    </transition>
-
-    <transition name="fade-in">
-      <Lightbox v-if="isLightbox" :images="images" />
-    </transition>
+    <ImageList
+      v-if="images.length"
+      :images="images"
+      @open-lightbox="openLightbox"
+    />
+    <Lightbox v-if="isLightbox" :images="images" />
     <div class="overlay" v-if="isLightbox"></div>
   </div>
 </template>
@@ -93,7 +88,6 @@ export default {
     filterByCity(filter) {
       if (filter === this.cityFilter) return;
       this.cityFilter = filter;
-      console.log("images by city", this.imagesByCity);
     },
   },
   beforeRouteUpdate(to, from, next) {
@@ -131,13 +125,6 @@ export default {
 }
 
 /***Transitions***/
-
-.fade-in-enter {
-  opacity: 0;
-}
-.fade-in-enter-active {
-  transition: opacity 0.25s ease-out;
-}
 
 .slide-enter {
   transform: translateY(10px);
