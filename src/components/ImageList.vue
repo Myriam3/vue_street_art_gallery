@@ -38,9 +38,6 @@
 </template>
 
 <script>
-// TODO: request next batch in the background
-// TODO: responsive images (mobile)
-
 import store from "@/store";
 import ImageItem from "@/components/ImageItem";
 

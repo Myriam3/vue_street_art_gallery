@@ -101,9 +101,11 @@ export default {
         next();
       });
     } else {
-      store.dispatch("images/fetchByCountry", to.params.country).then(() => {
-        next();
-      });
+      store
+        .dispatch("images/fetchByCountry", to.params.country.replace("_", " "))
+        .then(() => {
+          next();
+        });
     }
     //Reset city filter
     this.cityFilter = false;

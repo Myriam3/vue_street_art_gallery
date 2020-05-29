@@ -16,7 +16,7 @@
         <router-link
           :to="{
             name: 'country-gallery',
-            params: { country: country },
+            params: { country: country.replace(' ', '_') },
           }"
         >
           {{ country }}

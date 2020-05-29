@@ -74,7 +74,7 @@
       <router-link
         :to="{
           name: 'country-gallery',
-          params: { country: 'Czech Republic' },
+          params: { country: 'Czech_Republic' },
         }"
       >
         <path
@@ -145,7 +145,7 @@
       <router-link
         :to="{
           name: 'country-gallery',
-          params: { country: 'South Korea' },
+          params: { country: 'South_Korea' },
         }"
       >
         <path
@@ -187,7 +187,7 @@
       <router-link
         :to="{
           name: 'country-gallery',
-          params: { country: 'New Zealand' },
+          params: { country: 'New_Zealand' },
         }"
       >
         <path

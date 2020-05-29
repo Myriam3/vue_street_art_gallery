@@ -26,7 +26,7 @@ const routes = [{
             next();
           });
       } else {
-        store.dispatch("images/fetchByCountry", to.params.country)
+        store.dispatch("images/fetchByCountry", to.params.country.replace('_', ' '))
           .then(() => {
             next();
           });
