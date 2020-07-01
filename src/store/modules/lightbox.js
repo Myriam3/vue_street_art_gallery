@@ -2,7 +2,7 @@ export const namespaced = true;
 
 export const state = {
     toggled: false,
-    info: true,
+    info: false,
     currentIndex: 0,
     lastFocusEl: null
 };

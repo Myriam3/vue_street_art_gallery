@@ -1,6 +1,6 @@
 {
     "photos": [{
-            "path": "images_temp_3/japan/kyoto",
+            "path": "images/japan/kyoto",
             "fileName": "kyoto_station.jpg",
             "title": "",
             "year": "2013",
@@ -11,7 +11,7 @@
             "ratio": "z"
         },
         {
-            "path": "images_temp_3/japan/kyoto",
+            "path": "images/japan/kyoto",
             "fileName": "tako_street_art_kyoto.jpg",
             "title": "",
             "year": "2013",
@@ -22,7 +22,7 @@
             "ratio": "z"
         },
         {
-            "path": "images_temp_3/japan/kobe",
+            "path": "images/japan/kobe",
             "fileName": "chinatown_kobe_1_3.jpg",
             "title": "",
             "year": "2014",
@@ -33,7 +33,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/japan/kobe",
+            "path": "images/japan/kobe",
             "fileName": "chinatown_kobe_2.jpg",
             "title": "",
             "year": "2014",
@@ -44,7 +44,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/japan/osaka",
+            "path": "images/japan/osaka",
             "fileName": "americamura_osaka_43.jpg",
             "title": "",
             "year": "2016",
@@ -55,7 +55,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/japan/tokyo",
+            "path": "images/japan/tokyo",
             "fileName": "shibuya_1_32.jpg",
             "title": "",
             "year": "2016",
@@ -66,7 +66,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa.jpg",
             "title": "",
             "year": "2014",
@@ -77,7 +77,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "mister_chat_seoul.jpg",
             "title": "",
             "year": "2014",
@@ -88,7 +88,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "jongno_insadong_1.jpg",
             "title": "",
             "year": "2014",
@@ -99,7 +99,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hondae_1.jpg",
             "title": "",
             "year": "2014",
@@ -110,7 +110,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa_2.jpg",
             "title": "",
             "year": "2014",
@@ -121,7 +121,7 @@
             "ratio": "y"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa_3.jpg",
             "title": "",
             "year": "2014",
@@ -132,7 +132,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa_4.jpg",
             "title": "",
             "year": "2014",
@@ -143,7 +143,7 @@
             "ratio": "z"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa_5.jpg",
             "title": "",
             "year": "2014",
@@ -154,7 +154,7 @@
             "ratio": "z"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa_6.jpg",
             "title": "",
             "year": "2014",
@@ -165,7 +165,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa_7.jpg",
             "title": "",
             "year": "2014",
@@ -176,7 +176,7 @@
             "ratio": "z"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa_8.jpg",
             "title": "",
             "year": "2014",
@@ -187,7 +187,7 @@
             "ratio": "z"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa_9.jpg",
             "title": "",
             "year": "2014",
@@ -198,7 +198,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa_10.jpg",
             "title": "",
             "year": "2014",
@@ -209,7 +209,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa_11.jpg",
             "title": "",
             "year": "2014",
@@ -220,7 +220,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa_12.jpg",
             "title": "",
             "year": "2014",
@@ -231,7 +231,7 @@
             "ratio": "z"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "jongno_insadong_2.jpg",
             "title": "",
             "year": "2014",
@@ -242,7 +242,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa_13.jpg",
             "title": "",
             "year": "2014",
@@ -253,7 +253,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "itaewon_1.jpg",
             "title": "",
             "year": "2014",
@@ -264,7 +264,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa_14.jpg",
             "title": "",
             "year": "2016",
@@ -275,7 +275,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa_15.jpg",
             "title": "",
             "year": "2016",
@@ -286,7 +286,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/korea/seoul",
+            "path": "images/korea/seoul",
             "fileName": "hyehwa_16.jpg",
             "title": "",
             "year": "2016",
@@ -297,7 +297,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_01.jpg",
             "title": "",
             "year": "2017",
@@ -308,7 +308,7 @@
             "ratio": "z"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_03.jpg",
             "title": "",
             "year": "2017",
@@ -319,7 +319,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_04.jpg",
             "title": "",
             "year": "2017",
@@ -330,7 +330,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_05.jpg",
             "title": "",
             "year": "2017",
@@ -341,7 +341,7 @@
             "ratio": "wide"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_06.jpg",
             "title": "",
             "year": "2017",
@@ -352,7 +352,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_07.jpg",
             "title": "",
             "year": "2017",
@@ -363,7 +363,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/belgium/brussels",
+            "path": "images/belgium/brussels",
             "fileName": "brussels_01.jpg",
             "title": "",
             "year": "2016",
@@ -374,7 +374,7 @@
             "ratio": "z"
         },
         {
-            "path": "images_temp_3/belgium/brussels",
+            "path": "images/belgium/brussels",
             "fileName": "brussels_02.jpg",
             "title": "",
             "year": "2016",
@@ -385,7 +385,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/belgium/brussels",
+            "path": "images/belgium/brussels",
             "fileName": "brussels_03.jpg",
             "title": "",
             "year": "2016",
@@ -396,7 +396,7 @@
             "ratio": "z"
         },
         {
-            "path": "images_temp_3/belgium/brussels",
+            "path": "images/belgium/brussels",
             "fileName": "brussels_04.jpg",
             "title": "",
             "year": "2016",
@@ -407,7 +407,7 @@
             "ratio": "wide"
         },
         {
-            "path": "images_temp_3/belgium/brussels",
+            "path": "images/belgium/brussels",
             "fileName": "brussels_05.jpg",
             "title": "",
             "year": "2016",
@@ -418,7 +418,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/belgium/brussels",
+            "path": "images/belgium/brussels",
             "fileName": "brussels_06.jpg",
             "title": "",
             "year": "2016",
@@ -429,7 +429,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/belgium/brussels",
+            "path": "images/belgium/brussels",
             "fileName": "brussels_07.jpg",
             "title": "",
             "year": "2016",
@@ -440,7 +440,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/usa/san_francisco",
+            "path": "images/usa/san_francisco",
             "fileName": "san_francisco_01.jpg",
             "title": "",
             "year": "2015",
@@ -451,7 +451,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/usa/san_francisco",
+            "path": "images/usa/san_francisco",
             "fileName": "san_francisco_04.jpg",
             "title": "",
             "year": "2015",
@@ -462,7 +462,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/usa/san_francisco",
+            "path": "images/usa/san_francisco",
             "fileName": "san_francisco_02.jpg",
             "title": "",
             "year": "2015",
@@ -473,7 +473,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/usa/san_francisco",
+            "path": "images/usa/san_francisco",
             "fileName": "san_francisco_03.jpg",
             "title": "",
             "year": "2015",
@@ -484,7 +484,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/australia/sydney",
+            "path": "images/australia/sydney",
             "fileName": "bondy_01.jpg",
             "title": "",
             "year": "2017",
@@ -495,7 +495,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/australia/sydney",
+            "path": "images/australia/sydney",
             "fileName": "bondy_02.jpg",
             "title": "",
             "year": "2017",
@@ -506,7 +506,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/australia/sydney",
+            "path": "images/australia/sydney",
             "fileName": "bondy_03.jpg",
             "title": "",
             "year": "2017",
@@ -517,7 +517,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/australia/sydney",
+            "path": "images/australia/sydney",
             "fileName": "bondy_04.jpg",
             "title": "",
             "year": "2017",
@@ -528,7 +528,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/new_zealand/auckland",
+            "path": "images/new_zealand/auckland",
             "fileName": "auckland_01.jpg",
             "title": "",
             "year": "2017",
@@ -539,7 +539,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/new_zealand/auckland",
+            "path": "images/new_zealand/auckland",
             "fileName": "auckland_02.jpg",
             "title": "",
             "year": "2017",
@@ -550,7 +550,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/new_zealand/auckland",
+            "path": "images/new_zealand/auckland",
             "fileName": "auckland_03.jpg",
             "title": "",
             "year": "2017",
@@ -561,7 +561,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/uae/dubai",
+            "path": "images/uae/dubai",
             "fileName": "dubai_01.jpg",
             "title": "",
             "year": "2017",
@@ -572,7 +572,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/uae/dubai",
+            "path": "images/uae/dubai",
             "fileName": "dubai_02.jpg",
             "title": "",
             "year": "2017",
@@ -583,7 +583,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/uae/dubai",
+            "path": "images/uae/dubai",
             "fileName": "dubai_03.jpg",
             "title": "",
             "year": "2017",
@@ -594,7 +594,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/czech_republic/prague",
+            "path": "images/czech_republic/prague",
             "fileName": "prague_01.jpg",
             "title": "",
             "year": "2018",
@@ -605,7 +605,7 @@
             "ratio": "z"
         },
         {
-            "path": "images_temp_3/czech_republic/prague",
+            "path": "images/czech_republic/prague",
             "fileName": "prague_02.jpg",
             "title": "",
             "year": "2018",
@@ -616,7 +616,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/czech_republic/prague",
+            "path": "images/czech_republic/prague",
             "fileName": "prague_03.jpg",
             "title": "",
             "year": "2018",
@@ -627,7 +627,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/germany/berlin",
+            "path": "images/germany/berlin",
             "fileName": "berlin_01.jpg",
             "title": "",
             "year": "2018",
@@ -638,7 +638,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/germany/berlin",
+            "path": "images/germany/berlin",
             "fileName": "berlin_02.jpg",
             "title": "",
             "year": "2018",
@@ -649,7 +649,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/germany/berlin",
+            "path": "images/germany/berlin",
             "fileName": "berlin_03.jpg",
             "title": "",
             "year": "2018",
@@ -660,7 +660,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/orleans",
+            "path": "images/france/orleans",
             "fileName": "orleans_01.jpg",
             "title": "",
             "year": "2017",
@@ -671,7 +671,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/orleans",
+            "path": "images/france/orleans",
             "fileName": "orleans_02.jpg",
             "title": "",
             "year": "2017",
@@ -682,7 +682,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/orleans",
+            "path": "images/france/orleans",
             "fileName": "orleans_03.jpg",
             "title": "",
             "year": "2014",
@@ -693,7 +693,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/strasbourg",
+            "path": "images/france/strasbourg",
             "fileName": "strasbourg_01.jpg",
             "title": "",
             "year": "2017",
@@ -704,7 +704,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/strasbourg",
+            "path": "images/france/strasbourg",
             "fileName": "strasbourg_02.jpg",
             "title": "",
             "year": "2017",
@@ -715,7 +715,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/strasbourg",
+            "path": "images/france/strasbourg",
             "fileName": "mister_chat_strasbourg.jpg",
             "title": "",
             "year": "2015",
@@ -726,7 +726,7 @@
             "ratio": "z"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_01.jpg",
             "title": "",
             "year": "2014",
@@ -737,7 +737,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_02.jpg",
             "title": "",
             "year": "2014",
@@ -748,7 +748,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_03.jpg",
             "title": "",
             "year": "2014",
@@ -759,7 +759,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_04.jpg",
             "title": "",
             "year": "2016",
@@ -770,7 +770,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_05.jpg",
             "title": "",
             "year": "2016",
@@ -781,7 +781,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_06.jpg",
             "title": "",
             "year": "2016",
@@ -792,7 +792,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_07.jpg",
             "title": "",
             "year": "2016",
@@ -803,7 +803,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_08.jpg",
             "title": "",
             "year": "2016",
@@ -814,7 +814,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_09.jpg",
             "title": "",
             "year": "2016",
@@ -825,7 +825,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_10.jpg",
             "title": "",
             "year": "2017",
@@ -836,7 +836,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_11.jpg",
             "title": "",
             "year": "2018",
@@ -847,7 +847,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_12.jpg",
             "title": "",
             "year": "2016",
@@ -858,7 +858,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_13.jpg",
             "title": "",
             "year": "2016",
@@ -869,7 +869,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_14.jpg",
             "title": "",
             "year": "2016",
@@ -880,7 +880,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_15.jpg",
             "title": "",
             "year": "2016",
@@ -891,7 +891,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_16.jpg",
             "title": "",
             "year": "2016",
@@ -902,7 +902,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_17.jpg",
             "title": "",
             "year": "2016",
@@ -913,7 +913,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/paris",
+            "path": "images/france/paris",
             "fileName": "paris_18.jpg",
             "title": "",
             "year": "2016",
@@ -924,7 +924,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_08.jpg",
             "title": "",
             "year": "2017",
@@ -935,7 +935,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_09.jpg",
             "title": "",
             "year": "2017",
@@ -946,7 +946,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_10.jpg",
             "title": "",
             "year": "2017",
@@ -957,7 +957,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_11.jpg",
             "title": "",
             "year": "2017",
@@ -968,7 +968,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_12.jpg",
             "title": "",
             "year": "2017",
@@ -979,7 +979,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_13.jpg",
             "title": "",
             "year": "2017",
@@ -990,7 +990,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_14.jpg",
             "title": "",
             "year": "2017",
@@ -1001,7 +1001,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_15.jpg",
             "title": "",
             "year": "2017",
@@ -1012,7 +1012,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_16.jpg",
             "title": "",
             "year": "2017",
@@ -1023,7 +1023,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/france/marseille",
+            "path": "images/france/marseille",
             "fileName": "marseille_17.jpg",
             "title": "",
             "year": "2017",
@@ -1034,7 +1034,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/germany/berlin",
+            "path": "images/germany/berlin",
             "fileName": "berlin_04.jpg",
             "title": "",
             "year": "2018",
@@ -1045,7 +1045,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/germany/berlin",
+            "path": "images/germany/berlin",
             "fileName": "berlin_05.jpg",
             "title": "",
             "year": "2018",
@@ -1056,7 +1056,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/germany/berlin",
+            "path": "images/germany/berlin",
             "fileName": "berlin_06.jpg",
             "title": "",
             "year": "2018",
@@ -1067,7 +1067,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/germany/berlin",
+            "path": "images/germany/berlin",
             "fileName": "berlin_07.jpg",
             "title": "",
             "year": "2018",
@@ -1078,7 +1078,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/germany/berlin",
+            "path": "images/germany/berlin",
             "fileName": "berlin_08.jpg",
             "title": "",
             "year": "2018",
@@ -1089,7 +1089,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/germany/berlin",
+            "path": "images/germany/berlin",
             "fileName": "berlin_09.jpg",
             "title": "",
             "year": "2018",
@@ -1100,7 +1100,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/japan/tokyo",
+            "path": "images/japan/tokyo",
             "fileName": "tokyo_02.jpg",
             "title": "",
             "year": "2016",
@@ -1111,7 +1111,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/japan/osaka",
+            "path": "images/japan/osaka",
             "fileName": "osaka_02.jpg",
             "title": "",
             "year": "2014",
@@ -1122,7 +1122,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/japan/kobe",
+            "path": "images/japan/kobe",
             "fileName": "kobe_harbour.jpg",
             "title": "",
             "year": "2014",
@@ -1133,7 +1133,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/czech_republic/prague",
+            "path": "images/czech_republic/prague",
             "fileName": "prague_04.jpg",
             "title": "",
             "year": "2018",
@@ -1144,7 +1144,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/czech_republic/prague",
+            "path": "images/czech_republic/prague",
             "fileName": "prague_05.jpg",
             "title": "",
             "year": "2018",
@@ -1155,7 +1155,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/czech_republic/prague",
+            "path": "images/czech_republic/prague",
             "fileName": "prague_06.jpg",
             "title": "",
             "year": "2018",
@@ -1166,7 +1166,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/czech_republic/prague",
+            "path": "images/czech_republic/prague",
             "fileName": "prague_07.jpg",
             "title": "",
             "year": "2018",
@@ -1177,7 +1177,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/czech_republic/prague",
+            "path": "images/czech_republic/prague",
             "fileName": "prague_08.jpg",
             "title": "",
             "year": "2018",
@@ -1188,7 +1188,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/czech_republic/prague",
+            "path": "images/czech_republic/prague",
             "fileName": "prague_09.jpg",
             "title": "",
             "year": "2018",
@@ -1199,7 +1199,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/czech_republic/prague",
+            "path": "images/czech_republic/prague",
             "fileName": "prague_10.jpg",
             "title": "",
             "year": "2018",
@@ -1210,7 +1210,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/czech_republic/prague",
+            "path": "images/czech_republic/prague",
             "fileName": "prague_11.jpg",
             "title": "",
             "year": "2018",
@@ -1221,7 +1221,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/uae/dubai",
+            "path": "images/uae/dubai",
             "fileName": "dubai_04.jpg",
             "title": "",
             "year": "2017",
@@ -1232,7 +1232,7 @@
             "ratio": "32"
         },
         {
-            "path": "images_temp_3/uae/dubai",
+            "path": "images/uae/dubai",
             "fileName": "dubai_05.jpg",
             "title": "",
             "year": "2017",
@@ -1243,7 +1243,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/uae/dubai",
+            "path": "images/uae/dubai",
             "fileName": "dubai_06.jpg",
             "title": "",
             "year": "2017",
@@ -1254,7 +1254,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/uae/dubai",
+            "path": "images/uae/dubai",
             "fileName": "dubai_07.jpg",
             "title": "",
             "year": "2017",
@@ -1265,7 +1265,7 @@
             "ratio": "43"
         },
         {
-            "path": "images_temp_3/uae/dubai",
+            "path": "images/uae/dubai",
             "fileName": "dubai_08.jpg",
             "title": "",
             "year": "2017",
